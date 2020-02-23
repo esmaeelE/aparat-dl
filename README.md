@@ -8,11 +8,15 @@ pip install aparat_dl
 <br>
 and finally run it by
 <br>
-python -m aparat_dl
+python -m aparat_dl [args] [link]
+<br>
+or 
+<br>
+aparat_dl [args] [link]
 <br>
 <h2> manually</h2>
 <br>
 python3.7 -m pip install -U -r requirements.txt
 <br>
-python3.7 aparat_dl_menu.py
+python3.7 aparat_dl_menu.py [args] [link]
 
