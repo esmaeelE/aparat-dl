@@ -60,7 +60,7 @@ pip
 برنامه رو نصب کنید 
 </br>
 <span>
-pip install aparat_dl 
+pip3 install --user aparat_dl 
 </span>
 </br>
 و برای اجرا  
