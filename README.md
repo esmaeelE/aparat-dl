@@ -20,4 +20,6 @@ python3.7 -m pip install -U -r requirements.txt
 <br>
 python3.7 aparat_dl_menu.py [args] [link]
 
-<div id="46442020837"><script type="text/JavaScript" src="https://www.aparat.com/embed/hgs1x?data[rnddiv]=46442020837&data[responsive]=yes"></script></div>
+<video width="400" controls>
+  <source src="https://www.aparat.com/v/hgs1x" type="video/mp4">
+</video>
