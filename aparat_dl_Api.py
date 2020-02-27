@@ -112,6 +112,7 @@ class AparatDlApi():
         pdir = temp[0]
 
         links = vlink_extractor(link)
+        l2 =list(links)
         for j in links:
             # grab name of videos
             src = requests.get(j)
@@ -120,8 +121,11 @@ class AparatDlApi():
             # grab links of videos
             thelink = dllink_extractor(j)
             # download videos one by one
+            orderoflist = l2.index(j)
+            orderoflist+=1
+            fname =str(orderoflist ) + " -"+name
             ydl_opts = {
-                'outtmpl': pdir + "/"+name,
+                'outtmpl': pdir + "/"+fname,
                 'retries': 999,
             }
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
@@ -130,13 +134,13 @@ class AparatDlApi():
                     download=True)
 
 
-#-------------------
-
     @staticmethod
     def selectFromPlayList(link , start=0, end=100 ):
         '''
-        Downlaod a playlist in order
+        Download videos by selection on a playlist 
         :param str link
+        :param start int 
+        "param end int
         '''
         # grab the palylist name
         src = requests.get(link)
@@ -156,17 +160,16 @@ class AparatDlApi():
             links2 = links[start:end]
         except Exception as E :
             raise E
-        
-        for j in links2:
-            # grab name of videos
-            src = requests.get(j)
+        for i in range (start , end):
+            src = requests.get(links[i])
             soup = bs(src.text, "html.parser")
             name = soup.title.string
             # grab links of videos
-            thelink = dllink_extractor(j)
+            thelink = dllink_extractor(links[i])
             # download videos one by one
+            fname = str(i) + " -" + name
             ydl_opts = {
-                'outtmpl': pdir + "/"+name,
+                'outtmpl': pdir + "/"+fname,
                 'retries': 999,
             }
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
@@ -174,7 +177,8 @@ class AparatDlApi():
                     thelink,
                     download=True)
 
-#--------------
+
+
     @staticmethod
     def wholeChannel(link):
         '''
@@ -217,7 +221,7 @@ class AparatDlApi():
                     download=True)
 
 
-# when its run by  itself or  python -m
+# when its run from terminal or cmd
 if __name__ == "__main__":
     ap = AparatDlApi()
     arg = sys.argv[:]
@@ -228,8 +232,11 @@ if __name__ == "__main__":
             Options:
                 -H , --help : Helps you =)
                 -A , --allvideos  : Download whole Channel
+                        aparat_dl -A [link]
                 -L , --playlist : Download whole playlist
-                -SL, --selectfromlist: Download video by selection on a playlist example:  -SL [startpoint] [endpoint] [link]
+                        aparat_dl -L [link]
+                -SL, --selectfromlist: Download videos by selection on a playlist : 
+                        aparat_dl  -SL [startpoint] [endpoint] [link]
 
 
             '''
