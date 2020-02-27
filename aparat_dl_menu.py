@@ -16,15 +16,20 @@ def main():
 	try:
 		if arg.count("-H") or arg.count("--help"):
 			print(
-				'''
-			Options:
-				-H , --help : Helps you =)
-				-A , --allvideos  : Download whole Channel
-				-L , --playlist : Download whole playlist
-				-SL, --selectfromlist: Download video by selection on a playlist example:  -SL [startpoint] [endpoint] [link]
+	
+                '''
+            Options:
+                -H , --help : Helps you =)
+                -A , --allvideos  : Download whole Channel
+                        aparat_dl -A [link]
+                -L , --playlist : Download whole playlist
+                        aparat_dl -L [link]
+                -SL, --selectfromlist: Download videos by selection on a playlist : 
+                        aparat_dl  -SL [startpoint] [endpoint] [link]
 
 
-			'''
+            '''
+
 			)
 		elif len(arg) == 1:
 			print("""
