@@ -1,25 +1,80 @@
-<h1>how to get it work ?</h1>
-<br>
-first of all you need to download and install python 3 then
-<br>
-<h2> from pypi</h2>
-<br>
-pip install aparat_dl
-<br>
-and finally run it by
-<br>
-python -m aparat_dl [args] [link]
-<br>
-or 
-<br>
-aparat_dl [args] [link]
-<br>
-<h2> manually</h2>
-<br>
-python3.7 -m pip install -U -r requirements.txt
-<br>
-python3.7 aparat_dl_menu.py [args] [link]
+<p align="right">
+    اگر با سایت اپارات کار کرده باشید میدونید ویدیو هایی ک دانلود میکنید
+</br>
+    اسم ویدیو همه چیز هست بجز اسمی ک باید باشه
+</br>
+    مثلا اسم ویدیو
+</br>
+      xhddd34.mp4 
+</br>
+      هست
+</br>
+    خب این مشکل حل شده 
+</p>
 
-<video width="400" controls>
-  <source src="https://www.aparat.com/v/hgs1x" type="video/mp4">
-</video>
+<h2 align="right">این برنامه۳  عمل انجام میده:
+</h2>
+<p align="right">
+دانلود کل پلی لیست  یا  رنج خاصی از پلی لیست(دانلود در پوشه ای هم نام پلی لیست) 
+</br>
+دانلود کل کانال(در پوشه ای هم نام کانال) 
+</br>
+و دانلود تکی ویدیو
+</br>
+ لیست نمونه از دستورات 
+</br>
+</p>
+
+
+<p>
+    </br>
+    -H , --help : Helps you =)
+    </br>
+    -A , --allvideos : Download whole Channel
+    </br>
+    aparat_dl -A [link]
+    </br>
+    -L , --playlist : Download whole playlist
+    </br>
+    aparat_dl -L [link]
+    </br>
+    -SL, --selectfromlist: Download videos by selection on a playlist : 
+    </br>
+    aparat_dl -SL [startpoint] [endpoint] [link]
+</p>
+<p align="right">
+برای دیدن دستورات برنامه میتونید از کامند
+</br>
+<span>
+aparat_dl  -H
+</span>
+</br>
+هم استفاده بکنید
+</br>
+اما درمورد نصب برنامه برای نصب میتونید با استفاده از دستور
+</br>
+<span>
+pip
+</span>
+</br>
+برنامه رو نصب کنید 
+</br>
+<span>
+pip install aparat_dl 
+</span>
+</br>
+و برای اجرا  
+</br>
+<span>
+python -m aparat_dl [args] [link] 
+</span>
+</br>
+یا
+</br>
+<span>
+aparat_dl [args] [link]
+</span> 
+</br>
+در ترمینال یا 
+کامنت پرامپت وارد کند
+</p>
