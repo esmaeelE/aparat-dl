@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 __author__ = "https://github.com/mehdigudy, https://gitlab.com/frowzyispenguin"
 __license__ = "GNU3"
 __version__ = "0.1"
